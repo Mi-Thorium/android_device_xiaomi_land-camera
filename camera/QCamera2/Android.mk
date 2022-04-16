@@ -27,6 +27,10 @@ LOCAL_SRC_FILES += \
 
 LOCAL_CFLAGS := -Wall -Wextra -Werror -Wno-unused-parameter -Wno-unused-variable -Wno-implicit-fallthrough
 
+ifeq ($(MI8937_CAM_USE_RENAMED_BLOBS_L),true)
+LOCAL_CFLAGS += -DRENAME_BLOBS
+endif
+
 #HAL 1.0 source
 
 ifeq ($(TARGET_SUPPORT_HAL1),false)

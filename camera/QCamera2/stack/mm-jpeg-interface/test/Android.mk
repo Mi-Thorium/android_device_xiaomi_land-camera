@@ -10,6 +10,10 @@ LOCAL_CFLAGS := -DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID
 LOCAL_CFLAGS += -Wall -Wextra -Werror -Wno-unused-parameter
 LOCAL_CFLAGS += -D_ANDROID_
 
+ifeq ($(MI8937_CAM_USE_RENAMED_BLOBS_L),true)
+LOCAL_CFLAGS += -DRENAME_BLOBS
+endif
+
 ifeq ($(strip $(TARGET_USES_ION)),true)
 LOCAL_CFLAGS += -DUSE_ION
 endif
@@ -50,6 +54,10 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS := -DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID
 LOCAL_CFLAGS += -Wall -Wextra -Werror -Wno-unused-parameter
+
+ifeq ($(MI8937_CAM_USE_RENAMED_BLOBS_L),true)
+LOCAL_CFLAGS += -DRENAME_BLOBS
+endif
 
 LOCAL_CFLAGS += -D_ANDROID_
 

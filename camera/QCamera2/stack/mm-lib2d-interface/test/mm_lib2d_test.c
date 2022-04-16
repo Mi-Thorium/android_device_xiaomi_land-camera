@@ -351,7 +351,11 @@ int main(int32_t argc, const char * argv[])
   // Open Imglib library and get the function pointers for
   // buffer allocation, free, cacheops
   img_lib_buffert  img_lib;
+#ifdef RENAME_BLOBS
+  img_lib.ptr = dlopen("libLmcamera_imglib.so", RTLD_NOW);
+#else
   img_lib.ptr = dlopen("libmmcamera_imglib.so", RTLD_NOW);
+#endif
   if (!img_lib.ptr) {
     printf("%s ERROR: couldn't dlopen libmmcamera_imglib.so: %s",
        dlerror());
