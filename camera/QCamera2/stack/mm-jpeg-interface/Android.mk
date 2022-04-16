@@ -65,7 +65,6 @@ LOCAL_SRC_FILES := \
     src/mm_jpeg_mpo_composer.c
 
 LOCAL_MODULE           := libLmjpeg_interface
-LOCAL_CLANG := false
 LOCAL_PRELINK_MODULE   := false
 LOCAL_SHARED_LIBRARIES := libdl libcutils liblog libLomx_core libLmcamera_interface libutils
 LOCAL_MODULE_TAGS := optional
