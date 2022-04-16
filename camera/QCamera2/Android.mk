@@ -114,7 +114,7 @@ LOCAL_C_INCLUDES += \
 LOCAL_C_INCLUDES += \
         $(call project-path-for,qcom-display)/libqservice
 LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl libsync
-LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
+LOCAL_SHARED_LIBRARIES += libLmcamera_interface libLmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
 LOCAL_SHARED_LIBRARIES += libhidlbase libhwbinder
 LOCAL_SHARED_LIBRARIES += android.hardware.power@1.1
@@ -129,7 +129,7 @@ endif
 LOCAL_HEADER_LIBRARIES += media_plugin_headers
 
 LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE := camera.land
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_TAGS := optional
 

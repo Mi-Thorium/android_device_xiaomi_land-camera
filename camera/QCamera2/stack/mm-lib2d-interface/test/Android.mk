@@ -27,10 +27,10 @@ LOCAL_HEADER_LIBRARIES += generated_kernel_headers
 LOCAL_SRC_FILES := mm_lib2d_test.c
 
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
-LOCAL_MODULE           := mm-lib2d-interface-test
+LOCAL_MODULE           := Lm-lib2d-interface-test
 LOCAL_VENDOR_MODULE := true
 LOCAL_PRELINK_MODULE   := false
-LOCAL_SHARED_LIBRARIES := libcutils libdl libmmlib2d_interface
+LOCAL_SHARED_LIBRARIES := libcutils libdl libLmlib2d_interface
 
 include $(BUILD_EXECUTABLE)
 
